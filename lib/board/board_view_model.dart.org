@@ -1,0 +1,20 @@
+import 'package:dot_and_box/board/board_model.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final boardProvider = ChangeNotifierProvider((ref) => BoardViewModel.init);
+
+class BoardViewModel extends ChangeNotifier {
+  BoardModel model;
+
+  BoardViewModel(this.model);
+
+  static BoardViewModel get init {
+    return BoardViewModel(BoardModel(1, 1));
+  }
+
+  void load(BoardModel board) {
+    model = board;
+    notifyListeners();
+  }
+}

@@ -1,7 +1,8 @@
 import 'package:dot_and_box/agent/agent.dart';
 
-typedef StateModel = ({
+typedef PlayModel = ({
   int idx,
   Agent player,
-  List<int> scores,
+  (int, int) p1,
+  (int, int) p2,
 });

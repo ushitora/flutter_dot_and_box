@@ -5,3 +5,9 @@ Iterable<int> range(int startOrStop, [int? stop]) sync* {
     yield i;
   }
 }
+
+Iterable<(int, T)> enumerate<T>(List<T> list) sync* {
+  for (int i in range(list.length)) {
+    yield (i, list[i]);
+  }
+}

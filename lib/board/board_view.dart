@@ -1,17 +1,21 @@
 import 'package:dot_and_box/board/gadgets/line.dart';
 import 'package:dot_and_box/board/gadgets/tile.dart';
 import 'package:dot_and_box/game/game_view_model.dart';
+import 'package:dot_and_box/game/settings/settings_view_model.dart';
 import 'package:dot_and_box/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class BoardView extends ConsumerWidget {
-  static const lineWidth = 12.0;
-  static const tileSize = 50.0;
   const BoardView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final lineWidth =
+        ref.watch(settingsProvider.select((value) => value.lineWidth));
+    final tileSize =
+        ref.watch(settingsProvider.select((value) => value.tileSize));
+
     var board = ref.watch(gameProvider.select((value) => value.model.board));
     double W = board.W * tileSize + (board.W + 1) * lineWidth;
     double H = board.H * tileSize + (board.H + 1) * lineWidth;
