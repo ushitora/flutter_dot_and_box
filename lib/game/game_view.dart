@@ -1,5 +1,4 @@
 import 'package:dot_and_box/board/board_view.dart';
-import 'package:dot_and_box/game/history/history_view.dart';
 import 'package:dot_and_box/game/info/info_view.dart';
 import 'package:flutter/material.dart';
 
@@ -18,9 +17,10 @@ class GameView extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.all(30),
-          child: InfoView(),
-        ),
+            padding: EdgeInsets.all(30),
+            child: FittedBox(
+              child: InfoView(),
+            )),
       ],
     );
   }

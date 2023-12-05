@@ -18,6 +18,15 @@ class GameModel {
   GameModel(this.currentPlayer, this.players, this.board, this.playHistory,
       this.stateHistory);
 
+  factory GameModel.from(List<Agent> players, BoardModel board) {
+    var currentPlayer = players.first;
+    var playHistory = <PlayModel>[];
+    var stateHistory = [
+      (idx: 0, player: players.first, scores: [for (var p in players) 0])
+    ];
+    return GameModel(currentPlayer, players, board, playHistory, stateHistory);
+  }
+
   static GameModel get init {
     final players = [
       const Agent("Player1", Colors.red),
@@ -25,10 +34,7 @@ class GameModel {
       // const Agent("Player3", Colors.green),
     ];
     final board = BoardModel(7, 5);
-    final first = players.first;
-    final scores = [for (var p in players) 0];
-    return GameModel(
-        first, players, board, [], [(idx: 0, player: first, scores: scores)]);
+    return GameModel.from(players, board);
   }
 
   /// return if some tiles were filled by drawing

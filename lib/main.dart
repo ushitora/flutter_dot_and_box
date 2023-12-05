@@ -1,4 +1,4 @@
-import 'package:dot_and_box/home/home_view.dart';
+import 'package:dot_and_box/launcher/launcher_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         appBarTheme:
             const AppBarTheme(color: Color.fromARGB(255, 173, 194, 205)),
       ),
-      home: const HomeView(),
+      home: const LauncherView(),
     );
   }
 }

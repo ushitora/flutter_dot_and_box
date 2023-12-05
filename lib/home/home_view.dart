@@ -2,7 +2,6 @@ import 'package:dot_and_box/game/game_view.dart';
 import 'package:dot_and_box/game/history/history_view.dart';
 import 'package:dot_and_box/game/settings/settings_view.dart';
 import 'package:dot_and_box/home/home_view_model.dart';
-import 'package:dot_and_box/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:split_view/split_view.dart';
@@ -25,6 +24,19 @@ class HomeView extends ConsumerWidget {
               labelType: NavigationRailLabelType.all,
               elevation: 2,
               selectedIndex: idx,
+              trailing: Expanded(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: IconButton(
+                      tooltip: "go home",
+                      icon: const Icon(Icons.home),
+                      onPressed: () => Navigator.pop(context),
+                    ),
+                  ),
+                ),
+              ),
               destinations: [
                 for (var nav in navigation)
                   NavigationRailDestination(
