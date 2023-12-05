@@ -4,6 +4,10 @@
 
 ## Getting Started
 
+Macユーザの人は[Release](https://github.com/ushitora/flutter_dot_and_box/releases)からダウンロードしてみてください．
+
+その他，Debugモードで開きたい場合は以下の手順を試してみてください．
+
 ### Install Flutter
 
 詳細は[こちら](https://docs.flutter.dev/get-started/install)から
