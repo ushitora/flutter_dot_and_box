@@ -4,17 +4,17 @@
 
 ## Getting Started
 
-### 1. Install Flutter
+### Install Flutter
 
 詳細は[こちら](https://docs.flutter.dev/get-started/install)から
 
-### 2. clone this repository
+### Clone this repository
 
 ```sh
 git clone https://github.com/ushitora/flutter_dot_and_box
 ```
 
-### 3. run
+### Run
 
 ```sh
 cd flutter_dot_and_box
