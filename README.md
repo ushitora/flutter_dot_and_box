@@ -1,16 +1,24 @@
 # dot_and_box
 
-A new Flutter project.
+[ドット・アンド・ボックス](https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%83%E3%83%88%E3%82%A2%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9)の1人プレイ用デスクトップアプリ
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### 1. Install Flutter
 
-A few resources to get you started if this is your first Flutter project:
+詳細は[こちら](https://docs.flutter.dev/get-started/install)から
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 2. clone this repository
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```sh
+git clone https://github.com/ushitora/flutter_dot_and_box
+```
+
+### 3. run
+
+```sh
+cd flutter_dot_and_box
+flutter pub get
+flutter run -d macos
+```
+`macos`は自分の環境に合わせて`windows`や`linux`などに変えてください
